@@ -10,12 +10,24 @@ final class AppViewModel: ObservableObject {
     @Published private(set) var detailEvents: [SessionEvent] = []
 
     private let index: SessionIndex
+    private var watcher: DirectoryWatcher?
 
     init(index: SessionIndex = SessionIndex(
         store: SessionStore(baseDirectory: SessionStore.defaultBaseDirectory())
     )) {
         self.index = index
         refresh()
+        // 可选属性默认初始化为 nil，此后才能在逃逸闭包里捕获 self。
+        let watcher = DirectoryWatcher(path: index.store.baseDirectory) { [weak self] in
+            // 监听回调在私有队列上触发，统一跳主线程再刷新（SwiftUI 要求）。
+            DispatchQueue.main.async { self?.refresh() }
+        }
+        self.watcher = watcher
+        watcher.start()
+    }
+
+    deinit {
+        watcher?.stop()
     }
 
     /// agent + 目录 + 文本（标题 contains 匹配）三层过滤的会话列表。
