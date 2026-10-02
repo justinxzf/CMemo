@@ -46,6 +46,10 @@ public final class SessionStore {
     }
 
     public static func defaultBaseDirectory() -> URL {
+        // CMEMO_BASE_DIR 供测试与高级用法覆盖默认存储位置。
+        if let override = ProcessInfo.processInfo.environment["CMEMO_BASE_DIR"], !override.isEmpty {
+            return URL(fileURLWithPath: override, isDirectory: true)
+        }
         let url = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
             .appendingPathComponent("CMemo/sessions", isDirectory: true)
         try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)

@@ -9,5 +9,6 @@ let package = Package(
         .executableTarget(name: "cmemo", dependencies: ["CMemoKit"]),
         .executableTarget(name: "CMemoApp", dependencies: ["CMemoKit"]),
         .testTarget(name: "CMemoKitTests", dependencies: ["CMemoKit"]),
+        .testTarget(name: "CmemoCLITests", dependencies: ["cmemo"]),
     ]
 )
