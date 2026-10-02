@@ -2,7 +2,7 @@ import Foundation
 import Combine
 
 public final class SessionIndex: ObservableObject {
-    private let store: SessionStore
+    public let store: SessionStore
 
     @Published public private(set) var summaries: [SessionSummary] = []
 
