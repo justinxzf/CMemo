@@ -19,6 +19,17 @@ public struct SessionEvent: Codable, Equatable, Sendable {
     public var timestamp: Date
     public var title: String?
 
+    public init(agent: String, sessionID: String, cwd: String, role: Role,
+                content: String, timestamp: Date, title: String? = nil) {
+        self.agent = agent
+        self.sessionID = sessionID
+        self.cwd = cwd
+        self.role = role
+        self.content = content
+        self.timestamp = timestamp
+        self.title = title
+    }
+
     private enum CodingKeys: String, CodingKey {
         case agent
         case sessionID = "session_id"

@@ -9,7 +9,7 @@ struct CmemoCLI {
         Commands:
           record        Read hook JSON from stdin and persist it to the session store
           install       Emit hook configuration for supported agents
-          claude-reply  Print the last assistant reply of a session (not yet implemented)
+          claude-reply  Read a Claude Code Stop hook payload and persist the last assistant reply
         """
 
     static func main() {
@@ -24,8 +24,9 @@ struct CmemoCLI {
         case "install":
             exit(InstallCommand.run(agent: CommandLine.arguments.dropFirst(2).first ?? ""))
         case "claude-reply":
-            FileHandle.standardError.write(Data("cmemo claude-reply: not implemented yet\n".utf8))
-            exit(2)
+            let input = FileHandle.standardInput.readDataToEndOfFile()
+            let store = SessionStore(baseDirectory: SessionStore.defaultBaseDirectory())
+            exit(ClaudeReplyCommand.run(input: input, store: store, now: Date()))
         default:
             failWithUsage()
         }
