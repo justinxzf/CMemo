@@ -25,6 +25,20 @@ final class SessionIndexTests {
     }
 
     @Test
+    func reloadKeepsPreviousIndexWhenScanFails() throws {
+        let idx = SessionIndex(store: store)
+        idx.reload()
+        #expect(idx.summaries.count == 3)
+
+        // 把 sessions 目录替换成普通文件，contentsOfDirectory 抛错模拟扫描失败
+        try FileManager.default.removeItem(at: dir)
+        try Data("not a directory".utf8).write(to: dir)
+
+        idx.reload()
+        #expect(idx.summaries.count == 3) // 扫描失败应保留上次索引而非清空
+    }
+
+    @Test
     func testFilterByAgent() {
         let idx = SessionIndex(store: store)
         idx.reload()

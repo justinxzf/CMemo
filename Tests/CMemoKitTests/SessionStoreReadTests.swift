@@ -47,6 +47,28 @@ final class SessionStoreReadTests {
     }
 
     @Test
+    func scanToleratesFileTruncatedMidMultibyteCharacter() throws {
+        // 崩溃时半行写入若截断在多字节字符中间，严格 UTF-8 解码整文件会抛错；
+        // scan 应按文件容错：该文件以 isCorrupted 收录，其余文件仍被索引。
+        try store.append(SessionEvent(agent: "claude-code", sessionID: "good", cwd: "/a",
+                                      role: .user, content: "ok", timestamp: Date(timeIntervalSince1970: 1), title: nil))
+
+        let metaLine = "{\"type\":\"meta\",\"cwd\":\"/t\",\"created_at\":\"1970-01-01T00:00:00Z\"}\n"
+        // 半行写入：JSON 未闭合、末尾截在 CJK 多字节序列中间（0xE4 是三字节 UTF-8 的首字节）
+        let eventLine = "{\"agent\":\"cursor\",\"session_id\":\"tr\",\"cwd\":\"/t\",\"role\":\"user\",\"content\":\"你好"
+        var data = Data(metaLine.utf8)
+        data.append(Data(eventLine.utf8))
+        data.append(contentsOf: [0xE4])
+        try data.write(to: dir.appendingPathComponent("cursor-tr.jsonl"))
+
+        let all = try store.scan()
+        #expect(all.count == 2)
+        #expect(all.map(\.sessionID).contains("good"))
+        let truncated = try #require(all.first { $0.sessionID == "tr" })
+        #expect(truncated.isCorrupted)
+    }
+
+    @Test
     func loadMessagesSkipsCorruptLines() throws {
         try store.append(SessionEvent(agent: "cursor", sessionID: "s1", cwd: "/a",
                                       role: .user, content: "q", timestamp: Date(timeIntervalSince1970: 1), title: nil))

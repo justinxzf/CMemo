@@ -11,7 +11,9 @@ public final class SessionIndex: ObservableObject {
     }
 
     public func reload() {
-        summaries = (try? store.scan()) ?? []
+        // 扫描失败（目录被替换/暂时不可读）时保留上次索引，避免整个会话列表被清空。
+        guard let scanned = try? store.scan() else { return }
+        summaries = scanned
     }
 
     public func sessions(agent: String?, directoryPrefix: String?) -> [SessionSummary] {

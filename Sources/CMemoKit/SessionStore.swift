@@ -92,8 +92,9 @@ public final class SessionStore {
             includingPropertiesForKeys: [.contentModificationDateKey]
         )
         .filter { $0.pathExtension == "jsonl" }
-        return try files
-            .map { try Self.summarize(fileURL: $0) }
+        // 按文件容错：单个文件读取/解析失败（如半行写入、竞态消失）不击穿整次扫描。
+        return files
+            .compactMap { try? Self.summarize(fileURL: $0) }
             .sorted { $0.lastActiveAt > $1.lastActiveAt }
     }
 
@@ -106,7 +107,10 @@ public final class SessionStore {
     }
 
     private static func summarize(fileURL: URL) throws -> SessionSummary {
-        let text = try String(contentsOf: fileURL, encoding: .utf8)
+        // lossy 解码：崩溃截断可能落在多字节字符中间，严格 UTF-8 会整文件抛错；
+        // 换成逐字节替换 U+FFFD 后，行级容错（跳过坏行、isCorrupted）成为主防线。
+        let data = (try? Data(contentsOf: fileURL)) ?? Data()
+        let text = String(decoding: data, as: UTF8.self)
         var lines = text.split(separator: "\n", omittingEmptySubsequences: true).map(String.init)
 
         // 首行 meta：失败则整个文件视为损坏，cwd/createdAt 用文件修改时间兜底。
