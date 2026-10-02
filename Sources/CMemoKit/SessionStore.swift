@@ -37,7 +37,7 @@ public final class SessionStore {
     public func append(_ event: SessionEvent) throws -> URL {
         try FileManager.default.createDirectory(at: baseDirectory, withIntermediateDirectories: true)
         let url = baseDirectory.appendingPathComponent(
-            "\(event.agent)-\(Self.sanitizedSessionID(event.sessionID)).jsonl"
+            "\(Self.sanitizedSessionID(event.agent))-\(Self.sanitizedSessionID(event.sessionID)).jsonl"
         )
 
         // 同名文件视为同一会话，继续追加（不加时间戳后缀）。

@@ -67,4 +67,15 @@ final class SessionStoreWriteTests {
         let raw = try String(contentsOf: url, encoding: .utf8)
         #expect(raw.contains(big))
     }
+
+    @Test
+    func specialCharacterAgentStaysInOneFile() throws {
+        let store = SessionStore(baseDirectory: dir)
+        let evil = SessionEvent(agent: "../evil", sessionID: "abc", cwd: "/tmp/p",
+                                role: .user, content: "hi",
+                                timestamp: Date(timeIntervalSince1970: 100), title: nil)
+        let url = try store.append(evil)
+        #expect(url.path.hasPrefix(dir.path)) // agent 含路径分隔符也不逃逸出存储目录
+        #expect(FileManager.default.fileExists(atPath: url.path))
+    }
 }
