@@ -12,6 +12,32 @@ public struct SessionMeta: Codable, Equatable, Sendable {
     }
 }
 
+public struct SessionSummary: Equatable, Sendable {
+    public var agent: String
+    public var sessionID: String
+    public var fileURL: URL
+    public var cwd: String
+    public var createdAt: Date
+    public var lastActiveAt: Date
+    public var messageCount: Int
+    public var title: String
+    public var isCorrupted: Bool
+
+    init(agent: String, sessionID: String, fileURL: URL, cwd: String,
+         createdAt: Date, lastActiveAt: Date, messageCount: Int,
+         title: String, isCorrupted: Bool) {
+        self.agent = agent
+        self.sessionID = sessionID
+        self.fileURL = fileURL
+        self.cwd = cwd
+        self.createdAt = createdAt
+        self.lastActiveAt = lastActiveAt
+        self.messageCount = messageCount
+        self.title = title
+        self.isCorrupted = isCorrupted
+    }
+}
+
 public final class SessionStore {
     public let baseDirectory: URL
 
@@ -52,6 +78,96 @@ public final class SessionStore {
         try handle.seekToEnd()
         try handle.write(contentsOf: Self.lineData(event))
         return url
+    }
+
+    public func scan() throws -> [SessionSummary] {
+        let fm = FileManager.default
+        guard fm.fileExists(atPath: baseDirectory.path) else { return [] }
+        let files = try fm.contentsOfDirectory(
+            at: baseDirectory,
+            includingPropertiesForKeys: [.contentModificationDateKey]
+        )
+        .filter { $0.pathExtension == "jsonl" }
+        return try files
+            .map { try Self.summarize(fileURL: $0) }
+            .sorted { $0.lastActiveAt > $1.lastActiveAt }
+    }
+
+    public func loadMessages(of summary: SessionSummary) throws -> [SessionEvent] {
+        let text = try String(contentsOf: summary.fileURL, encoding: .utf8)
+        let now = Date()
+        return text
+            .split(separator: "\n", omittingEmptySubsequences: true)
+            .compactMap { try? SessionEvent.parse(Data($0.utf8), now: now) }
+    }
+
+    private static func summarize(fileURL: URL) throws -> SessionSummary {
+        let text = try String(contentsOf: fileURL, encoding: .utf8)
+        var lines = text.split(separator: "\n", omittingEmptySubsequences: true).map(String.init)
+
+        // 首行 meta：失败则整个文件视为损坏，cwd/createdAt 用文件修改时间兜底。
+        var isCorrupted = false
+        var meta: SessionMeta?
+        if let first = lines.first, let parsed = decodeMeta(first) {
+            meta = parsed
+            lines.removeFirst()
+        } else {
+            isCorrupted = true
+        }
+
+        let modificationDate = try fileURL
+            .resourceValues(forKeys: [.contentModificationDateKey])
+            .contentModificationDate
+        let fallbackDate = modificationDate ?? Date()
+
+        var events: [SessionEvent] = []
+        let now = Date()
+        for line in lines {
+            if let event = try? SessionEvent.parse(Data(line.utf8), now: now) {
+                events.append(event)
+            } else {
+                isCorrupted = true
+            }
+        }
+
+        let createdAt = meta?.createdAt ?? fallbackDate
+        let lastActiveAt = events.map(\.timestamp).max() ?? createdAt
+        let title: String
+        if let first = events.first {
+            title = first.title ?? String(first.content.prefix(80))
+        } else {
+            title = ""
+        }
+
+        // agent/sessionID 优先取自首条消息，缺省时从文件名（agent-sessionID）兜底。
+        let stem = fileURL.deletingPathExtension().lastPathComponent
+        let filenameAgent: String
+        let filenameSessionID: String
+        if let dash = stem.firstIndex(of: "-") {
+            filenameAgent = String(stem[..<dash])
+            filenameSessionID = String(stem[stem.index(after: dash)...])
+        } else {
+            filenameAgent = stem
+            filenameSessionID = stem
+        }
+
+        return SessionSummary(
+            agent: events.first?.agent ?? filenameAgent,
+            sessionID: events.first?.sessionID ?? filenameSessionID,
+            fileURL: fileURL,
+            cwd: meta?.cwd ?? "",
+            createdAt: createdAt,
+            lastActiveAt: lastActiveAt,
+            messageCount: events.count,
+            title: title,
+            isCorrupted: isCorrupted
+        )
+    }
+
+    private static func decodeMeta(_ line: String) -> SessionMeta? {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        return try? decoder.decode(SessionMeta.self, from: Data(line.utf8))
     }
 
     private static func lineData(_ value: some Encodable) throws -> Data {
