@@ -8,7 +8,7 @@ struct CmemoCLI {
 
         Commands:
           record        Read hook JSON from stdin and persist it to the session store
-          install       Install hook configuration for supported agents (not yet implemented)
+          install       Emit hook configuration for supported agents
           claude-reply  Print the last assistant reply of a session (not yet implemented)
         """
 
@@ -21,8 +21,10 @@ struct CmemoCLI {
             let input = FileHandle.standardInput.readDataToEndOfFile()
             let store = SessionStore(baseDirectory: SessionStore.defaultBaseDirectory())
             exit(RecordCommand.run(input: input, store: store, now: Date()))
-        case "install", "claude-reply":
-            FileHandle.standardError.write(Data("cmemo \(command): not implemented yet\n".utf8))
+        case "install":
+            exit(InstallCommand.run(agent: CommandLine.arguments.dropFirst(2).first ?? ""))
+        case "claude-reply":
+            FileHandle.standardError.write(Data("cmemo claude-reply: not implemented yet\n".utf8))
             exit(2)
         default:
             failWithUsage()
