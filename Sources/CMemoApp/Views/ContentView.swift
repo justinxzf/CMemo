@@ -12,10 +12,5 @@ struct ContentView: View {
             SessionDetailView(viewModel: viewModel)
         }
         .frame(minWidth: 1000, minHeight: 640)
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                FilterBarView(viewModel: viewModel)
-            }
-        }
     }
 }
