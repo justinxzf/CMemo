@@ -1,7 +1,8 @@
 import SwiftUI
 import CMemoKit
 
-/// 目录树：OutlineGroup 渲染 directoryTree，点击选中目录联动过滤，再点取消。
+/// 目录树：OutlineGroup 渲染折叠后的目录树（无会话单子链合并为一行），
+/// 点击选中目录联动过滤，再点取消。
 struct DirectoryTreeView: View {
     @ObservedObject var viewModel: AppViewModel
 
@@ -24,7 +25,7 @@ struct DirectoryTreeView: View {
                 }
             }
         )) {
-            OutlineGroup(outlineNodes(viewModel.directoryTree), children: \.children) { node in
+            OutlineGroup(outlineNodes(viewModel.collapsedDirectoryTree), children: \.children) { node in
                 Text(node.name)
                     .tag(node.path)
             }
@@ -32,7 +33,7 @@ struct DirectoryTreeView: View {
         .navigationTitle("目录")
     }
 
-    private func outlineNodes(_ nodes: [SessionIndex.DirectoryNode]) -> [OutlineNode] {
+    private func outlineNodes(_ nodes: [SessionIndex.CollapsedDirectoryNode]) -> [OutlineNode] {
         nodes.map { node in
             OutlineNode(
                 id: node.id,

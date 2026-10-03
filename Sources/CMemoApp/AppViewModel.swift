@@ -47,6 +47,11 @@ final class AppViewModel: ObservableObject {
         index.directoryTree()
     }
 
+    /// 展示用折叠目录树：无会话的单子链合并为一行（如 A/B/C/D）。
+    var collapsedDirectoryTree: [SessionIndex.CollapsedDirectoryNode] {
+        index.collapsedDirectoryTree()
+    }
+
     func refresh() {
         objectWillChange.send()
         index.reload()

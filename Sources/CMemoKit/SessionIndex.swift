@@ -38,6 +38,15 @@ public final class SessionIndex: ObservableObject {
         public let children: [DirectoryNode]
     }
 
+    /// 目录树展示用的折叠节点：自身无会话且只有单子链的中间目录不展开，
+    /// 合并为一行（如 A/B/C/D）。name 为合并后的分量拼接，path 为真实完整路径。
+    public struct CollapsedDirectoryNode: Identifiable, Equatable, Sendable {
+        public let id: String
+        public let name: String
+        public let path: String
+        public let children: [CollapsedDirectoryNode]
+    }
+
     public func directoryTree() -> [DirectoryNode] {
         // 按所有 cwd 的路径分量增量建树，仅纳入有会话的路径。
         final class Node {
@@ -73,5 +82,29 @@ public final class SessionIndex: ObservableObject {
             )
         }
         return root.children.values.sorted { $0.name < $1.name }.map(convert)
+    }
+
+    /// 展示用目录树：折叠「无会话且仅单子」的中间目录链。
+    public func collapsedDirectoryTree() -> [CollapsedDirectoryNode] {
+        let sessionPaths = Set(summaries.map(\.cwd))
+        func collapse(_ node: DirectoryNode) -> CollapsedDirectoryNode {
+            var names = [node.name]
+            var path = node.path
+            var current = node
+            // 自身无会话且恰好一个子节点 → 继续下钻合并；有会话、多子或叶子即停。
+            while !sessionPaths.contains(current.path), current.children.count == 1 {
+                let child = current.children[0]
+                names.append(child.name)
+                path = child.path
+                current = child
+            }
+            return CollapsedDirectoryNode(
+                id: path,
+                name: names.joined(separator: "/"),
+                path: path,
+                children: current.children.map(collapse)
+            )
+        }
+        return directoryTree().map(collapse)
     }
 }
