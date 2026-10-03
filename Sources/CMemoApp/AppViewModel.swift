@@ -11,6 +11,7 @@ final class AppViewModel: ObservableObject {
 
     private let index: SessionIndex
     private var watcher: DirectoryWatcher?
+    private var searchDebounceTask: Task<Void, Never>?
 
     init(index: SessionIndex = SessionIndex(
         store: SessionStore(baseDirectory: SessionStore.defaultBaseDirectory())
@@ -30,12 +31,9 @@ final class AppViewModel: ObservableObject {
         watcher?.stop()
     }
 
-    /// agent + 目录 + 文本（标题 contains 匹配）三层过滤的会话列表。
+    /// agent + 目录 + 关键字三层过滤的会话列表；关键字对标题与消息内容全文匹配。
     var visibleSessions: [SessionSummary] {
-        let matches = index.sessions(agent: selectedAgent, directoryPrefix: selectedDirectory)
-        let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !query.isEmpty else { return matches }
-        return matches.filter { $0.title.localizedCaseInsensitiveContains(query) }
+        index.searchSessions(query: searchText, agent: selectedAgent, directoryPrefix: selectedDirectory)
     }
 
     /// 首项「全部」代表不过滤 agent。
@@ -65,5 +63,15 @@ final class AppViewModel: ObservableObject {
     /// 选中「全部」时清除 agent 过滤。
     func selectAgent(_ option: String) {
         selectedAgent = option == "全部" ? nil : option
+    }
+
+    /// 输入防抖 250ms 后才更新 searchText——全文检索需读会话文件，避免逐键全量扫描。
+    func updateSearch(_ text: String) {
+        searchDebounceTask?.cancel()
+        searchDebounceTask = Task { [weak self] in
+            try? await Task.sleep(nanoseconds: 250_000_000)
+            guard !Task.isCancelled else { return }
+            self?.searchText = text
+        }
     }
 }

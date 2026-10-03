@@ -13,6 +13,9 @@ struct SessionDetailView: View {
             } else {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 10) {
+                        if let summary = viewModel.selectedSession {
+                            SessionInfoHeader(summary: summary)
+                        }
                         ForEach(viewModel.detailEvents.indices, id: \.self) { index in
                             EventBubble(event: viewModel.detailEvents[index])
                         }
@@ -22,6 +25,47 @@ struct SessionDetailView: View {
             }
         }
         .navigationTitle("详情")
+    }
+}
+
+/// 会话信息头：Session ID、Agent、开启时间、会话地址（均可选择复制）。
+private struct SessionInfoHeader: View {
+    let summary: SessionSummary
+
+    var body: some View {
+        Grid(alignment: .leading, horizontalSpacing: 24, verticalSpacing: 6) {
+            GridRow {
+                LabeledValue(label: "Session ID", value: summary.sessionID, monospaced: true)
+                LabeledValue(label: "Agent", value: summary.agent)
+            }
+            GridRow(alignment: .top) {
+                LabeledValue(label: "开启时间", value: summary.createdAt.formatted(date: .abbreviated, time: .shortened))
+                LabeledValue(label: "会话地址", value: summary.cwd, monospaced: true)
+            }
+        }
+        .padding(10)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(RoundedRectangle(cornerRadius: 10).fill(Color.secondary.opacity(0.08)))
+    }
+}
+
+private struct LabeledValue: View {
+    let label: String
+    let value: String
+    var monospaced = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 1) {
+            Text(label)
+                .font(.caption2)
+                .foregroundStyle(.secondary)
+            Text(value)
+                .font(monospaced ? .system(.caption, design: .monospaced) : .caption)
+                .lineLimit(1)
+                .truncationMode(.middle)
+                .textSelection(.enabled)
+                .help(value)
+        }
     }
 }
 

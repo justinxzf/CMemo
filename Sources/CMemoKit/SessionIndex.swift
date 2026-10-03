@@ -27,6 +27,19 @@ public final class SessionIndex: ObservableObject {
         }
     }
 
+    /// 关键字全文检索：标题或任一消息内容命中（不区分大小写）即视为相关；
+    /// 空白查询等价于普通过滤；读取失败的文件按无命中处理。
+    public func searchSessions(query: String, agent: String?, directoryPrefix: String?) -> [SessionSummary] {
+        let base = sessions(agent: agent, directoryPrefix: directoryPrefix)
+        let keyword = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !keyword.isEmpty else { return base }
+        return base.filter { summary in
+            if summary.title.localizedCaseInsensitiveContains(keyword) { return true }
+            guard let messages = try? store.loadMessages(of: summary) else { return false }
+            return messages.contains { $0.content.localizedCaseInsensitiveContains(keyword) }
+        }
+    }
+
     public func agentNames() -> [String] {
         Array(Set(summaries.map(\.agent))).sorted()
     }

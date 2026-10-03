@@ -1,8 +1,9 @@
 import SwiftUI
 
-/// 工具栏过滤条：agent 筛选 + 文本过滤框（对会话标题做 contains 匹配）。
+/// 工具栏过滤条：agent 筛选 + 搜索框（标题/消息内容全文检索，输入防抖）。
 struct FilterBarView: View {
     @ObservedObject var viewModel: AppViewModel
+    @State private var query = ""
 
     var body: some View {
         Picker("Agent", selection: Binding(
@@ -16,8 +17,11 @@ struct FilterBarView: View {
         .pickerStyle(.menu)
         .fixedSize()
 
-        TextField("按标题过滤…", text: $viewModel.searchText)
+        TextField("搜索标题或内容…", text: $query)
             .textFieldStyle(.roundedBorder)
             .frame(maxWidth: 220)
+            .onChange(of: query) { newValue in
+                viewModel.updateSearch(newValue)
+            }
     }
 }
