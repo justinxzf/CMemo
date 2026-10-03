@@ -24,12 +24,11 @@ struct SessionListView: View {
             }
         }
         .navigationTitle("会话")
-        // 过滤条固定在会话列表顶部，保证搜索框始终可见。
-        .safeAreaInset(edge: .top, spacing: 0) {
-            FilterBarView(viewModel: viewModel)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 8)
-                .background(.bar)
+        // 过滤条挂在本栏导航栏内，与「会话」标题同一行。
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                FilterBarView(viewModel: viewModel)
+            }
         }
     }
 

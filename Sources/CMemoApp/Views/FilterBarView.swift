@@ -16,11 +16,12 @@ struct FilterBarView: View {
                 }
             }
             .pickerStyle(.menu)
+            .labelsHidden()
             .fixedSize()
 
             TextField("搜索标题或内容…", text: $query)
                 .textFieldStyle(.roundedBorder)
-                .frame(maxWidth: 220)
+                .frame(maxWidth: 180)
                 .onChange(of: query) { newValue in
                     viewModel.updateSearch(newValue)
                 }
