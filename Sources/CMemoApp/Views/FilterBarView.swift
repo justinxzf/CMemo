@@ -6,22 +6,24 @@ struct FilterBarView: View {
     @State private var query = ""
 
     var body: some View {
-        Picker("Agent", selection: Binding(
-            get: { viewModel.selectedAgent ?? "全部" },
-            set: { viewModel.selectAgent($0) }
-        )) {
-            ForEach(viewModel.agentOptions, id: \.self) { option in
-                Text(option).tag(option)
+        HStack(spacing: 8) {
+            Picker("Agent", selection: Binding(
+                get: { viewModel.selectedAgent ?? "全部" },
+                set: { viewModel.selectAgent($0) }
+            )) {
+                ForEach(viewModel.agentOptions, id: \.self) { option in
+                    Text(option).tag(option)
+                }
             }
-        }
-        .pickerStyle(.menu)
-        .fixedSize()
+            .pickerStyle(.menu)
+            .fixedSize()
 
-        TextField("搜索标题或内容…", text: $query)
-            .textFieldStyle(.roundedBorder)
-            .frame(maxWidth: 220)
-            .onChange(of: query) { newValue in
-                viewModel.updateSearch(newValue)
-            }
+            TextField("搜索标题或内容…", text: $query)
+                .textFieldStyle(.roundedBorder)
+                .frame(maxWidth: 220)
+                .onChange(of: query) { newValue in
+                    viewModel.updateSearch(newValue)
+                }
+        }
     }
 }
