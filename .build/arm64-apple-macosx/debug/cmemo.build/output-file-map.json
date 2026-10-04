@@ -1,0 +1,29 @@
+{
+  "": {
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/master.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/ClaudeReplyCommand.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/ClaudeReplyCommand.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/ClaudeReplyCommand.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/ClaudeReplyCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/ClaudeReplyCommand.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/CmemoCLI.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/CmemoCLI.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/CmemoCLI.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/CmemoCLI~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/CmemoCLI.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/InstallCommand.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/InstallCommand.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/InstallCommand.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/InstallCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/InstallCommand.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/RecordCommand.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/RecordCommand.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/RecordCommand.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/RecordCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/RecordCommand.swiftdeps"
+  }
+}

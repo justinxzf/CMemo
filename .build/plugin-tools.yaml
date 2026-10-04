@@ -1,0 +1,246 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "CMemoApp-arm64-apple-macosx15.0-debug.exe": ["<CMemoApp-arm64-apple-macosx15.0-debug.exe>"]
+  "CMemoApp-arm64-apple-macosx15.0-debug.module": ["<CMemoApp-arm64-apple-macosx15.0-debug.module>"]
+  "CMemoKit-arm64-apple-macosx15.0-debug.module": ["<CMemoKit-arm64-apple-macosx15.0-debug.module>"]
+  "CMemoKitTests-arm64-apple-macosx15.0-debug.module": ["<CMemoKitTests-arm64-apple-macosx15.0-debug.module>"]
+  "CMemoPackageTests-arm64-apple-macosx15.0-debug.module": ["<CMemoPackageTests-arm64-apple-macosx15.0-debug.module>"]
+  "CMemoPackageTests-arm64-apple-macosx15.0-debug.test": ["<CMemoPackageTests-arm64-apple-macosx15.0-debug.test>"]
+  "CmemoCLITests-arm64-apple-macosx15.0-debug.module": ["<CmemoCLITests-arm64-apple-macosx15.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "cmemo-arm64-apple-macosx15.0-debug.exe": ["<cmemo-arm64-apple-macosx15.0-debug.exe>"]
+  "cmemo-arm64-apple-macosx15.0-debug.module": ["<cmemo-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<CMemoApp-arm64-apple-macosx15.0-debug.exe>","<CMemoApp-arm64-apple-macosx15.0-debug.module>","<CMemoKit-arm64-apple-macosx15.0-debug.module>","<cmemo-arm64-apple-macosx15.0-debug.exe>","<cmemo-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<CMemoApp-arm64-apple-macosx15.0-debug.exe>","<CMemoApp-arm64-apple-macosx15.0-debug.module>","<CMemoKit-arm64-apple-macosx15.0-debug.module>","<CMemoKitTests-arm64-apple-macosx15.0-debug.module>","<CMemoPackageTests-arm64-apple-macosx15.0-debug.test>","<CmemoCLITests-arm64-apple-macosx15.0-debug.module>","<cmemo-arm64-apple-macosx15.0-debug.exe>","<cmemo-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/xiezhaofei/AI/CMemo/Tests/CmemoCLITests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp":
+    is-mutated: true
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo":
+    is-mutated: true
+commands:
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp-entitlement.plist"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp-entitlement.plist"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AppViewModel.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/CMemoApp.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/ContentView.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/DirectoryTreeView.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/FilterBarView.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/SessionDetailView.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/SessionListView.swift"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/sources"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/sources"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/CMemoApp.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/ContentView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/DirectoryTreeView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/FilterBarView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionDetailView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionListView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/ClaudeTranscript.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionEvent.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionIndex.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionStore.swift.o"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.product/Objects.LinkFileList"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/ClaudeTranscript.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/DirectoryWatcher.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/MarkdownBlocks.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionEvent.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionIndex.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionStore.swift"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/sources"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/sources"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/ClaudeTranscriptTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/CollapsedDirectoryTreeTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/FullTextSearchTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/MarkdownBlocksTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionEventTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionIndexReloadTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionIndexTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionStoreReadTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionStoreWriteTests.swift"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/sources"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/sources"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.derived/runner.swift"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/sources"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/sources"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: []
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.derived/runner.swift"]
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/ClaudeTranscript.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionEvent.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionIndex.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionStore.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/ClaudeTranscriptTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/CollapsedDirectoryTreeTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/FullTextSearchTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/MarkdownBlocksTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionEventTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionIndexReloadTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionIndexTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionStoreReadTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionStoreWriteTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/runner.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/InstallCommandTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/RecordE2ETests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/ClaudeReplyCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/CmemoCLI.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/InstallCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/RecordCommand.swift.o"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.product/Objects.LinkFileList"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/xiezhaofei/AI/CMemo/Tests/CmemoCLITests/InstallCommandTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CmemoCLITests/RecordE2ETests.swift"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/sources"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/sources"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo-entitlement.plist"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo-entitlement.plist"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/xiezhaofei/AI/CMemo/Sources/cmemo/ClaudeReplyCommand.swift","/Users/xiezhaofei/AI/CMemo/Sources/cmemo/CmemoCLI.swift","/Users/xiezhaofei/AI/CMemo/Sources/cmemo/InstallCommand.swift","/Users/xiezhaofei/AI/CMemo/Sources/cmemo/RecordCommand.swift"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/sources"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/sources"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/ClaudeTranscript.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionEvent.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionIndex.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionStore.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/ClaudeReplyCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/CmemoCLI.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/InstallCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/RecordCommand.swift.o"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.product/Objects.LinkFileList"
+
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<CMemoApp-arm64-apple-macosx15.0-debug.exe>":
+    tool: phony
+    inputs: ["<CMemoApp-arm64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    outputs: ["<CMemoApp-arm64-apple-macosx15.0-debug.exe>"]
+
+  "<CMemoApp-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/CMemoApp.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/ContentView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/DirectoryTreeView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/FilterBarView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionDetailView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionListView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoApp.swiftmodule"]
+    outputs: ["<CMemoApp-arm64-apple-macosx15.0-debug.module>"]
+
+  "<CMemoKit-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/ClaudeTranscript.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionEvent.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionIndex.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionStore.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKit.swiftmodule"]
+    outputs: ["<CMemoKit-arm64-apple-macosx15.0-debug.module>"]
+
+  "<CMemoKitTests-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/ClaudeTranscriptTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/CollapsedDirectoryTreeTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/FullTextSearchTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/MarkdownBlocksTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionEventTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionIndexReloadTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionIndexTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionStoreReadTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionStoreWriteTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKitTests.swiftmodule"]
+    outputs: ["<CMemoKitTests-arm64-apple-macosx15.0-debug.module>"]
+
+  "<CMemoPackageTests-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/runner.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoPackageTests.swiftmodule"]
+    outputs: ["<CMemoPackageTests-arm64-apple-macosx15.0-debug.module>"]
+
+  "<CMemoPackageTests-arm64-apple-macosx15.0-debug.test>":
+    tool: phony
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.xctest/Contents/MacOS/CMemoPackageTests"]
+    outputs: ["<CMemoPackageTests-arm64-apple-macosx15.0-debug.test>"]
+
+  "<CmemoCLITests-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/InstallCommandTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/RecordE2ETests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CmemoCLITests.swiftmodule"]
+    outputs: ["<CmemoCLITests-arm64-apple-macosx15.0-debug.module>"]
+
+  "<cmemo-arm64-apple-macosx15.0-debug.exe>":
+    tool: phony
+    inputs: ["<cmemo-arm64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    outputs: ["<cmemo-arm64-apple-macosx15.0-debug.exe>"]
+
+  "<cmemo-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/ClaudeReplyCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/CmemoCLI.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/InstallCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/RecordCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/cmemo.swiftmodule"]
+    outputs: ["<cmemo-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.CMemoApp-arm64-apple-macosx15.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/CMemoApp.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/ContentView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/DirectoryTreeView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/FilterBarView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionDetailView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionListView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/ClaudeTranscript.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionEvent.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionIndex.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionStore.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.product/Objects.LinkFileList"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/CMemoApp"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug","-o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp","-module-name","CMemoApp","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_CMemoApp_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.product/Objects.LinkFileList","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoApp.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKit.swiftmodule","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/Library/Developer/Frameworks"]
+
+  "C.CMemoApp-arm64-apple-macosx15.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp-entitlement.plist"]
+    outputs: ["<CMemoApp-arm64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/CMemoApp"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp-entitlement.plist","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp"]
+
+  "C.CMemoApp-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AppViewModel.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/CMemoApp.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/ContentView.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/DirectoryTreeView.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/FilterBarView.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/SessionDetailView.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/SessionListView.swift","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKit.swiftmodule","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/sources"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/CMemoApp.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/ContentView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/DirectoryTreeView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/FilterBarView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionDetailView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionListView.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoApp.swiftmodule"]
+    description: "Compiling Swift Module 'CMemoApp' (7 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","CMemoApp","-emit-dependencies","-emit-module","-emit-module-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoApp.swiftmodule","-output-file-map","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/output-file-map.json","-incremental","-c","@/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/sources","-I","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-enable-batch-mode","-index-store-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","CMemoApp_main","-color-diagnostics","-swift-version","5","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","cmemo"]
+
+  "C.CMemoKit-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/ClaudeTranscript.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/DirectoryWatcher.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/MarkdownBlocks.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionEvent.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionIndex.swift","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionStore.swift","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/sources"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/ClaudeTranscript.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionEvent.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionIndex.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionStore.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKit.swiftmodule"]
+    description: "Compiling Swift Module 'CMemoKit' (6 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","CMemoKit","-emit-dependencies","-emit-module","-emit-module-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKit.swiftmodule","-output-file-map","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/sources","-I","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-enable-batch-mode","-index-store-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/CMemoKit-Swift.h","-color-diagnostics","-swift-version","5","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","cmemo"]
+
+  "C.CMemoKitTests-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/ClaudeTranscriptTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/CollapsedDirectoryTreeTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/FullTextSearchTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/MarkdownBlocksTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionEventTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionIndexReloadTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionIndexTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionStoreReadTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionStoreWriteTests.swift","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKit.swiftmodule","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/sources"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/ClaudeTranscriptTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/CollapsedDirectoryTreeTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/FullTextSearchTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/MarkdownBlocksTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionEventTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionIndexReloadTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionIndexTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionStoreReadTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionStoreWriteTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKitTests.swiftmodule"]
+    description: "Compiling Swift Module 'CMemoKitTests' (9 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","CMemoKitTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKitTests.swiftmodule","-output-file-map","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/sources","-I","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-enable-batch-mode","-index-store-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","5","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","cmemo"]
+
+  "C.CMemoPackageTests-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.derived/runner.swift","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CmemoCLITests.swiftmodule","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKitTests.swiftmodule","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/sources"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/runner.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'CMemoPackageTests' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","CMemoPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoPackageTests.swiftmodule","-output-file-map","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/sources","-I","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-enable-batch-mode","-index-store-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/CMemoPackageTests-Swift.h","-color-diagnostics","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","cmemo"]
+
+  "C.CMemoPackageTests-arm64-apple-macosx15.0-debug.test":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/ClaudeTranscript.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionEvent.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionIndex.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionStore.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/ClaudeTranscriptTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/CollapsedDirectoryTreeTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/FullTextSearchTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/MarkdownBlocksTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionEventTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionIndexReloadTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionIndexTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionStoreReadTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionStoreWriteTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/runner.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/InstallCommandTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/RecordE2ETests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/ClaudeReplyCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/CmemoCLI.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/InstallCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/RecordCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.xctest/Contents/MacOS/CMemoPackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/CMemoPackageTests.xctest/Contents/MacOS/CMemoPackageTests"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug","-o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.xctest/Contents/MacOS/CMemoPackageTests","-module-name","CMemoPackageTests","-Xlinker","-no_warn_duplicate_libraries","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.product/Objects.LinkFileList","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKit.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKitTests.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoPackageTests.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CmemoCLITests.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/cmemo.swiftmodule","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/Library/Developer/Frameworks"]
+
+  "C.CmemoCLITests-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/Tests/CmemoCLITests/InstallCommandTests.swift","/Users/xiezhaofei/AI/CMemo/Tests/CmemoCLITests/RecordE2ETests.swift","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/sources"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/InstallCommandTests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/RecordE2ETests.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CmemoCLITests.swiftmodule"]
+    description: "Compiling Swift Module 'CmemoCLITests' (2 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","CmemoCLITests","-emit-dependencies","-emit-module","-emit-module-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CmemoCLITests.swiftmodule","-output-file-map","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/sources","-I","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-enable-batch-mode","-index-store-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","5","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","cmemo"]
+
+  "C.cmemo-arm64-apple-macosx15.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/ClaudeTranscript.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionEvent.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionIndex.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionStore.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/ClaudeReplyCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/CmemoCLI.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/InstallCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/RecordCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.product/Objects.LinkFileList"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/cmemo"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug","-o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo","-module-name","cmemo","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_cmemo_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.product/Objects.LinkFileList","-target","arm64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKit.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/cmemo.swiftmodule","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/Library/Developer/Frameworks"]
+
+  "C.cmemo-arm64-apple-macosx15.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo-entitlement.plist"]
+    outputs: ["<cmemo-arm64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/cmemo"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo-entitlement.plist","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo"]
+
+  "C.cmemo-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/xiezhaofei/AI/CMemo/Sources/cmemo/ClaudeReplyCommand.swift","/Users/xiezhaofei/AI/CMemo/Sources/cmemo/CmemoCLI.swift","/Users/xiezhaofei/AI/CMemo/Sources/cmemo/InstallCommand.swift","/Users/xiezhaofei/AI/CMemo/Sources/cmemo/RecordCommand.swift","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoKit.swiftmodule","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/sources"]
+    outputs: ["/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/ClaudeReplyCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/CmemoCLI.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/InstallCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/RecordCommand.swift.o","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/cmemo.swiftmodule"]
+    description: "Compiling Swift Module 'cmemo' (4 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","cmemo","-emit-dependencies","-emit-module","-emit-module-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/cmemo.swiftmodule","-output-file-map","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/output-file-map.json","-incremental","-c","@/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/cmemo.build/sources","-I","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx13.0","-enable-batch-mode","-index-store-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","cmemo_main","-color-diagnostics","-swift-version","5","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","cmemo"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/","/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/","/Users/xiezhaofei/AI/CMemo/Sources/cmemo/","/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/","/Users/xiezhaofei/AI/CMemo/Tests/CmemoCLITests/","/Users/xiezhaofei/AI/CMemo/Package.swift","/Users/xiezhaofei/AI/CMemo/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

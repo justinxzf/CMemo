@@ -1,0 +1,4 @@
+module CMemoKit {
+    header "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/CMemoKit-Swift.h"
+    requires objc
+}

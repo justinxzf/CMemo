@@ -1,0 +1,4 @@
+module CMemoPackageTests {
+    header "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/CMemoPackageTests-Swift.h"
+    requires objc
+}

@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/master.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AppViewModel.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/CMemoApp.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/CMemoApp.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/CMemoApp.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/CMemoApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/CMemoApp.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/ContentView.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/ContentView.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/ContentView.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/ContentView.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/DirectoryTreeView.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/DirectoryTreeView.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/DirectoryTreeView.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/DirectoryTreeView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/DirectoryTreeView.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/FilterBarView.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/FilterBarView.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/FilterBarView.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/FilterBarView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/FilterBarView.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/SessionDetailView.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionDetailView.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionDetailView.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionDetailView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionDetailView.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/SessionListView.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionListView.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionListView.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionListView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/SessionListView.swiftdeps"
+  }
+}

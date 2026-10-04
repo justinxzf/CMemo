@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/master.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.derived/runner.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/runner.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoPackageTests.build/runner.swiftdeps"
+  }
+}

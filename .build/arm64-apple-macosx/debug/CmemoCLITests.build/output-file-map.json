@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/master.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CmemoCLITests/InstallCommandTests.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/InstallCommandTests.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/InstallCommandTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/InstallCommandTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/InstallCommandTests.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CmemoCLITests/RecordE2ETests.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/RecordE2ETests.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/RecordE2ETests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/RecordE2ETests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CmemoCLITests.build/RecordE2ETests.swiftdeps"
+  }
+}
