@@ -21,6 +21,9 @@ struct SessionListView: View {
             ForEach(sessionsSortedByLastActive, id: \.fileURL) { summary in
                 SessionRow(summary: summary)
                     .tag(summary.fileURL)
+                    .contextMenu {
+                        JumpToAgentMenu(summary: summary)
+                    }
             }
         }
         .navigationTitle("会话")

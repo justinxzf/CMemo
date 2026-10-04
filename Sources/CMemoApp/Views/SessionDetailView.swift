@@ -21,6 +21,11 @@ struct SessionDetailView: View {
                         }
                     }
                     .padding()
+                    .contextMenu {
+                        if let summary = viewModel.selectedSession {
+                            JumpToAgentMenu(summary: summary)
+                        }
+                    }
                 }
             }
         }

@@ -4,11 +4,20 @@ public struct SessionMeta: Codable, Equatable, Sendable {
     public var type: String = "meta"
     public var cwd: String
     public var createdAt: Date
+    /// 落盘时刻采集的宿主应用（旧会话文件无此字段，解码缺省 nil）。
+    public var hostApp: HostAppInfo?
+
+    public init(cwd: String, createdAt: Date, hostApp: HostAppInfo? = nil) {
+        self.cwd = cwd
+        self.createdAt = createdAt
+        self.hostApp = hostApp
+    }
 
     private enum CodingKeys: String, CodingKey {
         case type
         case cwd
         case createdAt = "created_at"
+        case hostApp = "host_app"
     }
 }
 
@@ -22,10 +31,11 @@ public struct SessionSummary: Equatable, Sendable {
     public var messageCount: Int
     public var title: String
     public var isCorrupted: Bool
+    public var hostApp: HostAppInfo?
 
     init(agent: String, sessionID: String, fileURL: URL, cwd: String,
          createdAt: Date, lastActiveAt: Date, messageCount: Int,
-         title: String, isCorrupted: Bool) {
+         title: String, isCorrupted: Bool, hostApp: HostAppInfo? = nil) {
         self.agent = agent
         self.sessionID = sessionID
         self.fileURL = fileURL
@@ -35,6 +45,7 @@ public struct SessionSummary: Equatable, Sendable {
         self.messageCount = messageCount
         self.title = title
         self.isCorrupted = isCorrupted
+        self.hostApp = hostApp
     }
 }
 
@@ -64,7 +75,7 @@ public final class SessionStore {
         String(id.map { allowedFilenameCharacters.contains($0) ? $0 : "_" })
     }
 
-    public func append(_ event: SessionEvent) throws -> URL {
+    public func append(_ event: SessionEvent, hostApp: HostAppInfo? = nil) throws -> URL {
         try FileManager.default.createDirectory(at: baseDirectory, withIntermediateDirectories: true)
         let url = baseDirectory.appendingPathComponent(
             "\(Self.sanitizedSessionID(event.agent))-\(Self.sanitizedSessionID(event.sessionID)).jsonl"
@@ -72,7 +83,7 @@ public final class SessionStore {
 
         // 同名文件视为同一会话，继续追加（不加时间戳后缀）。
         if !FileManager.default.fileExists(atPath: url.path) {
-            let meta = SessionMeta(cwd: event.cwd, createdAt: event.timestamp)
+            let meta = SessionMeta(cwd: event.cwd, createdAt: event.timestamp, hostApp: hostApp)
             // 先写临时文件再 rename，保证 meta 首行原子落盘。
             try Self.lineData(meta).write(to: url, options: .atomic)
         }
@@ -168,7 +179,8 @@ public final class SessionStore {
             lastActiveAt: lastActiveAt,
             messageCount: events.count,
             title: title,
-            isCorrupted: isCorrupted
+            isCorrupted: isCorrupted,
+            hostApp: meta?.hostApp
         )
     }
 

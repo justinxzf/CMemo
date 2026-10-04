@@ -13,7 +13,8 @@ enum RecordCommand {
             return 1
         }
         do {
-            _ = try store.append(event)
+            // 落盘时刻采集宿主应用（进程链），写入 meta 供 App「Jump to Agent」使用。
+            _ = try store.append(event, hostApp: ProcessChainCollector.collectHostApp())
         } catch {
             FileHandle.standardError.write(Data("cmemo record: write failed: \(error)\n".utf8))
             return 1
