@@ -1,11 +1,12 @@
 version: "Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)"
 options: "e0e447286a4f11d71c844df959a6995af21c5e737c10c608577621a0bec1ace0"
-build_start_time: [1791094758, 468304000]
-build_end_time: [1791094795, 884012000]
+build_start_time: [1793204897, 9500000]
+build_end_time: [1793204899, 573170000]
 inputs:
   "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/ClaudeTranscript.swift": [1791094506, 489060861]
   "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/DirectoryWatcher.swift": [1791094506, 524966516]
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/HostApp.swift": [1791095945, 65926887]
   "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/MarkdownBlocks.swift": [1791094506, 548608746]
   "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionEvent.swift": [1791094506, 489304318]
   "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionIndex.swift": [1791094506, 571316902]
-  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionStore.swift": [1791094506, 536722694]
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionStore.swift": [1791095956, 468154529]

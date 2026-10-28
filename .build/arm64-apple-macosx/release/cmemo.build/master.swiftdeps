@@ -1,9 +1,9 @@
 version: "Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)"
 options: "5cc4bd37cbd66df32a125f557e6ae593185f2d70645253e3176b1b5755df7cfc"
-build_start_time: [1791094796, 6282000]
-build_end_time: [1791094796, 587230000]
+build_start_time: [1793204899, 850461000]
+build_end_time: [1793204900, 554151000]
 inputs:
-  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/ClaudeReplyCommand.swift": [1791094506, 489463816]
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/ClaudeReplyCommand.swift": [1791095965, 723235309]
   "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/CmemoCLI.swift": [1791094506, 489651273]
   "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/InstallCommand.swift": [1791094506, 476657773]
-  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/RecordCommand.swift": [1791094506, 463725939]
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/RecordCommand.swift": [1791095962, 253563800]
