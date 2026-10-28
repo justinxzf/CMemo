@@ -2,6 +2,12 @@
   "": {
     "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/master.swiftdeps"
   },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AgentJumper.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AgentJumper.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AgentJumper.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AgentJumper~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AgentJumper.swiftdeps"
+  },
   "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AppViewModel.swift": {
     "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.d",
     "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.swift.o",

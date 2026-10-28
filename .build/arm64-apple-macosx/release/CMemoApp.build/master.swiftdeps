@@ -1,0 +1,12 @@
+version: "Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)"
+options: "24c4d647fe374a79fedfe3c00e315037ceb0da0fff92848a2ea7e82d09c4d192"
+build_start_time: [1791094796, 6328000]
+build_end_time: [1791094809, 730654000]
+inputs:
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AppViewModel.swift": [1791094506, 570517868]
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/CMemoApp.swift": [1791094506, 501959362]
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/ContentView.swift": [1791094506, 583480452]
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/DirectoryTreeView.swift": [1791094506, 559422350]
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/FilterBarView.swift": [1791094506, 602554060]
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/SessionDetailView.swift": [1791094506, 571107196]
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/SessionListView.swift": [1791094506, 602721933]

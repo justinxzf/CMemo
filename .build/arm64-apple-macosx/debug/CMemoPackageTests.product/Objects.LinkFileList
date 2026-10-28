@@ -1,5 +1,6 @@
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/ClaudeTranscript.swift.o
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o
+/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/HostApp.swift.o
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionEvent.swift.o
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionIndex.swift.o
@@ -7,6 +8,7 @@
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/ClaudeTranscriptTests.swift.o
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/CollapsedDirectoryTreeTests.swift.o
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/FullTextSearchTests.swift.o
+/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/HostAppTests.swift.o
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/MarkdownBlocksTests.swift.o
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionEventTests.swift.o
 /Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionIndexReloadTests.swift.o

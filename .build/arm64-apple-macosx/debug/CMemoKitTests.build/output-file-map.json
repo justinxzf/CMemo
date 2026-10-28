@@ -20,6 +20,12 @@
     "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/FullTextSearchTests~partial.swiftmodule",
     "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/FullTextSearchTests.swiftdeps"
   },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/HostAppTests.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/HostAppTests.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/HostAppTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/HostAppTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/HostAppTests.swiftdeps"
+  },
   "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/MarkdownBlocksTests.swift": {
     "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/MarkdownBlocksTests.d",
     "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/MarkdownBlocksTests.swift.o",

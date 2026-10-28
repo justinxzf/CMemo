@@ -1,0 +1,52 @@
+{
+  "": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/CMemoKitTests.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/CMemoKitTests.o",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/master.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/ClaudeTranscriptTests.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/ClaudeTranscriptTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/ClaudeTranscriptTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/ClaudeTranscriptTests.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/CollapsedDirectoryTreeTests.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/CollapsedDirectoryTreeTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/CollapsedDirectoryTreeTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/CollapsedDirectoryTreeTests.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/FullTextSearchTests.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/FullTextSearchTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/FullTextSearchTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/FullTextSearchTests.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/MarkdownBlocksTests.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/MarkdownBlocksTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/MarkdownBlocksTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/MarkdownBlocksTests.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionEventTests.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionEventTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionEventTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionEventTests.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionIndexReloadTests.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionIndexReloadTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionIndexReloadTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionIndexReloadTests.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionIndexTests.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionIndexTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionIndexTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionIndexTests.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionStoreReadTests.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionStoreReadTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionStoreReadTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionStoreReadTests.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionStoreWriteTests.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionStoreWriteTests.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionStoreWriteTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKitTests.build/SessionStoreWriteTests.swiftdeps"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/cmemo.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/cmemo.o",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/master.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/ClaudeReplyCommand.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/ClaudeReplyCommand.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/ClaudeReplyCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/ClaudeReplyCommand.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/CmemoCLI.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/CmemoCLI.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/CmemoCLI~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/CmemoCLI.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/InstallCommand.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/InstallCommand.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/InstallCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/InstallCommand.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/cmemo/RecordCommand.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/RecordCommand.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/RecordCommand~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/cmemo.build/RecordCommand.swiftdeps"
+  }
+}

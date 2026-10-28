@@ -28,6 +28,10 @@
       "inputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AgentJumper.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AppViewModel.swift"
         },
         {
@@ -71,6 +75,7 @@
       "moduleName" : "CMemoApp",
       "moduleOutputPath" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/Modules/CMemoApp.swiftmodule",
       "objects" : [
+        "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AgentJumper.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/CMemoApp.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/ContentView.swift.o",
@@ -120,6 +125,10 @@
       "outputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AgentJumper.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AppViewModel.swift.o"
         },
         {
@@ -153,6 +162,7 @@
       ],
       "prepareForIndexing" : false,
       "sources" : [
+        "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AgentJumper.swift",
         "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AppViewModel.swift",
         "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/CMemoApp.swift",
         "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/ContentView.swift",
@@ -176,6 +186,10 @@
         {
           "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/DirectoryWatcher.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/HostApp.swift"
         },
         {
           "kind" : "file",
@@ -208,6 +222,7 @@
       "objects" : [
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/ClaudeTranscript.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o",
+        "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/HostApp.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionEvent.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/SessionIndex.swift.o",
@@ -262,6 +277,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/HostApp.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o"
         },
         {
@@ -285,6 +304,7 @@
       "sources" : [
         "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/ClaudeTranscript.swift",
         "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/DirectoryWatcher.swift",
+        "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/HostApp.swift",
         "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/MarkdownBlocks.swift",
         "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionEvent.swift",
         "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionIndex.swift",
@@ -309,6 +329,10 @@
         {
           "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/FullTextSearchTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/HostAppTests.swift"
         },
         {
           "kind" : "file",
@@ -354,6 +378,7 @@
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/ClaudeTranscriptTests.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/CollapsedDirectoryTreeTests.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/FullTextSearchTests.swift.o",
+        "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/HostAppTests.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/MarkdownBlocksTests.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionEventTests.swift.o",
         "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/SessionIndexReloadTests.swift.o",
@@ -413,6 +438,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/HostAppTests.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/MarkdownBlocksTests.swift.o"
         },
         {
@@ -445,6 +474,7 @@
         "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/ClaudeTranscriptTests.swift",
         "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/CollapsedDirectoryTreeTests.swift",
         "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/FullTextSearchTests.swift",
+        "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/HostAppTests.swift",
         "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/MarkdownBlocksTests.swift",
         "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionEventTests.swift",
         "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionIndexReloadTests.swift",
@@ -760,6 +790,7 @@
       "cmemo",
       "-incremental",
       "-c",
+      "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AgentJumper.swift",
       "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AppViewModel.swift",
       "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/CMemoApp.swift",
       "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/Views/ContentView.swift",
@@ -817,6 +848,7 @@
       "-c",
       "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/ClaudeTranscript.swift",
       "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/DirectoryWatcher.swift",
+      "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/HostApp.swift",
       "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/MarkdownBlocks.swift",
       "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionEvent.swift",
       "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionIndex.swift",
@@ -872,6 +904,7 @@
       "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/ClaudeTranscriptTests.swift",
       "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/CollapsedDirectoryTreeTests.swift",
       "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/FullTextSearchTests.swift",
+      "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/HostAppTests.swift",
       "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/MarkdownBlocksTests.swift",
       "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionEventTests.swift",
       "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/SessionIndexReloadTests.swift",
@@ -1135,6 +1168,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AgentJumper.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/Sources/CMemoApp/AppViewModel.swift"
         },
         {
@@ -1170,6 +1207,10 @@
         {
           "kind" : "virtual",
           "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoApp.build/AgentJumper.swift.o"
         },
         {
           "kind" : "file",
@@ -1209,6 +1250,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/HostApp.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o"
         },
         {
@@ -1240,6 +1285,10 @@
         {
           "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/DirectoryWatcher.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/HostApp.swift"
         },
         {
           "kind" : "file",
@@ -1278,6 +1327,10 @@
         {
           "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/FullTextSearchTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/Tests/CMemoKitTests/HostAppTests.swift"
         },
         {
           "kind" : "file",
@@ -1337,6 +1390,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/HostApp.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o"
         },
         {
@@ -1362,6 +1419,10 @@
         {
           "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/FullTextSearchTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKitTests.build/HostAppTests.swift.o"
         },
         {
           "kind" : "file",
@@ -1490,6 +1551,10 @@
         {
           "kind" : "file",
           "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/HostApp.swift.o"
         },
         {
           "kind" : "file",

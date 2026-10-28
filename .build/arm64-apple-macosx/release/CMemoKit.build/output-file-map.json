@@ -1,0 +1,37 @@
+{
+  "": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/CMemoKit.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/CMemoKit.o",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/master.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/ClaudeTranscript.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/ClaudeTranscript.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/ClaudeTranscript~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/ClaudeTranscript.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/DirectoryWatcher.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/DirectoryWatcher.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/DirectoryWatcher~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/DirectoryWatcher.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/MarkdownBlocks.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/MarkdownBlocks.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/MarkdownBlocks~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/MarkdownBlocks.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionEvent.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/SessionEvent.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/SessionEvent~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/SessionEvent.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionIndex.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/SessionIndex.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/SessionIndex~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/SessionIndex.swiftdeps"
+  },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/SessionStore.swift": {
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/SessionStore.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/SessionStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/release/CMemoKit.build/SessionStore.swiftdeps"
+  }
+}

@@ -14,6 +14,12 @@
     "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher~partial.swiftmodule",
     "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/DirectoryWatcher.swiftdeps"
   },
+  "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/HostApp.swift": {
+    "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/HostApp.d",
+    "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/HostApp.swift.o",
+    "swiftmodule": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/HostApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/HostApp.swiftdeps"
+  },
   "/Users/xiezhaofei/AI/CMemo/Sources/CMemoKit/MarkdownBlocks.swift": {
     "dependencies": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.d",
     "object": "/Users/xiezhaofei/AI/CMemo/.build/arm64-apple-macosx/debug/CMemoKit.build/MarkdownBlocks.swift.o",
